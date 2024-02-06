@@ -1,6 +1,6 @@
 def parse_month(month):
 
-        if month == "Januany":
+        if month == "January":
             return "01"
         elif month == "Febuary":
             return "02"
@@ -37,7 +37,10 @@ def parse_date(user_string):
     return f"{parse_month(list_user_string[0])}/{day(list_user_string[1][:-1])}/{list_user_string[2]}"
 
 if __name__ == '__main__':
-    print(parse_date(input()))
+    dates = input
+    while dates != -1:
+        print(parse_date(dates))
+        dates = input()
     
     
     
