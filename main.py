@@ -1,16 +1,43 @@
-#parse month should take in the text of the month and return the number 
-#as a string
-#January -> 1 (as a string)
-#YOU MAY USE THIS FUNCTION IF YOU WANT TO OR YOU MAY REMOVE IT
 def parse_month(month):
-    pass
 
-#REMOVE PASS AND FIX THIS FUNCTION
-#parse_date function should return the date formated as MM/DD/YYYY
-#DO NOT REMOVE THIS FUNCTION
+        if month == "Januany":
+            return "01"
+        elif month == "Febuary":
+            return "02"
+        elif month == "March":
+            return "03"
+        elif month == "April":
+            return "04"
+        elif month == "May":
+            return "05"
+        elif month == "June":
+            return "06"
+        elif month == "July":
+            return "07"
+        elif month == "Agust":
+            return "08"
+        elif month == "September":
+            return "09"
+        elif month == "October":
+            return "10"
+        elif month == "November":
+            return "11"
+        elif month == "December":
+            return "12"
+        
+def day(day):
+    if len(day) == 1:
+        return f"0{day}"
+    else:
+        return day
+        
 def parse_date(user_string):
-    pass
+    list_user_string = user_string.split(" ")
+    
+    return f"{parse_month(list_user_string[0])}/{day(list_user_string[1][:-1])}/{list_user_string[2]}"
 
-#REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    pass
+    print(parse_date(input()))
+    
+    
+    
